@@ -56,33 +56,33 @@ describe('@mantine/core/CSSGrid', () => {
     expect(container.firstChild).toHaveStyle({ justifyContent: 'center' })
   })
 
-  // it('sets grid-auto-rows based on autoRows prop', () => {
-  //   const { container } = render(<CSSGrid autoRows={160} />)
-  //   expect(container.firstChild).toHaveStyle({ gridAutoRows: rem(160) })
-  // })
+  it('sets grid-auto-rows based on autoRows prop', () => {
+    const { container } = render(<CSSGrid autoRows={'16rem'} />)
+    expect(container.firstChild).toHaveStyle({ gridAutoRows: '16rem' })
+  })
 
-  // it('sets grid-auto-columns based on autoColumns prop', () => {
-  //   const { container } = render(<CSSGrid autoColumns={160} />)
-  //   expect(container.firstChild).toHaveStyle({ gridAutoColumns: rem(160) })
-  // })
+  it('sets grid-auto-columns based on autoColumns prop', () => {
+    const { container } = render(<CSSGrid autoColumns={'16rem'} />)
+    expect(container.firstChild).toHaveStyle({ gridAutoColumns: '16rem' })
+  })
 
-  // it('sets grid-auto-flow based on autoFlow prop', () => {
-  //   const { container } = render(<CSSGrid autoFlow='dense' />)
-  //   expect(container.firstChild).toHaveStyle({ gridAutoFlow: 'dense' })
-  // })
+  it('sets grid-auto-flow based on autoFlow prop', () => {
+    const { container } = render(<CSSGrid autoFlow='dense' />)
+    expect(container.firstChild).toHaveStyle({ gridAutoFlow: 'dense' })
+  })
 
-  // it('sets grid-template-areas based on templateAreas prop', () => {
-  //   const { container } = render(<CSSGrid templateAreas='"a b c" "d e f"' />)
-  //   expect(container.firstChild).toHaveStyle({ gridTemplateAreas: '"a b c" "d e f"' })
-  // })
+  it('sets grid-template-areas based on templateAreas prop', () => {
+    const { container } = render(<CSSGrid templateAreas='"a b c" "d e f"' />)
+    expect(container.firstChild).toHaveStyle({ gridTemplateAreas: '"a b c" "d e f"' })
+  })
 
-  // it('sets grid-template-columns based on templateColumns prop', () => {
-  //   const { container } = render(<CSSGrid templateColumns='1fr auto' />)
-  //   expect(container.firstChild).toHaveStyle({ gridTemplateColumns: '"1fr auto"' })
-  // })
+  it('sets grid-template-columns based on templateColumns prop', () => {
+    const { container } = render(<CSSGrid templateColumns='1fr auto' />)
+    expect(container.firstChild).toHaveStyle({ gridTemplateColumns: '1fr auto' })
+  })
 
-  // it('sets grid-template-rows based on templateRows prop', () => {
-  //   const { container } = render(<CSSGrid templateRows='1fr auto' />)
-  //   expect(container.firstChild).toHaveStyle({ gridTemplateRows: '"1fr auto"' })
-  // })
+  it('sets grid-template-rows based on templateRows prop', () => {
+    const { container } = render(<CSSGrid templateRows='1fr auto' />)
+    expect(container.firstChild).toHaveStyle({ gridTemplateRows: '1fr auto' })
+  })
 })
